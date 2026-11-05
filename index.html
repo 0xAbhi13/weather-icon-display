@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Icon Display — Static Data · Veda Technology Internship Day 27</title>
+  <meta name="description" content="A polished, responsive weather condition selector. Pick a condition from a dropdown and see its matching icon, description, and themed background. Static data only — no APIs." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page__header">
+      <p class="eyebrow">VEDA TECHNOLOGY INTERNSHIP &middot; DAY 27 / 45</p>
+      <h1 class="page__title">Weather Icon Display</h1>
+      <p class="page__subtitle">Select a weather condition and watch the scene change.</p>
+    </header>
+
+    <section class="weather-card" id="weatherCard" aria-labelledby="cardTitle" data-theme="default">
+      <h2 id="cardTitle" class="sr-only">Weather display</h2>
+
+      <!-- Default / welcome state -->
+      <div class="weather-view weather-view--default" id="defaultView">
+        <div class="icon-stage" aria-hidden="true">
+          <span class="weather-icon weather-icon--default" id="defaultIcon">🌦️</span>
+        </div>
+        <h3 class="weather-name" id="defaultTitle">Welcome to Weather Display</h3>
+        <p class="weather-desc" id="defaultDesc">Choose a weather condition from the dropdown below to see its icon, description, and themed background.</p>
+        <p class="hint">No APIs, no network — everything runs locally with static data.</p>
+      </div>
+
+      <!-- Selected condition state -->
+      <div class="weather-view weather-view--condition" id="conditionView" hidden>
+        <div class="icon-stage" aria-hidden="true">
+          <span class="weather-icon" id="conditionIcon">☀️</span>
+        </div>
+        <h3 class="weather-name" id="conditionName">Sunny</h3>
+        <p class="weather-desc" id="conditionDesc" aria-live="polite">Clear skies with bright sunshine.</p>
+        <span class="theme-chip" id="themeChip">Sunny theme</span>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <div class="field">
+          <label for="weatherSelect" class="field__label">Weather Condition</label>
+          <div class="select-wrap">
+            <select id="weatherSelect" class="select" aria-required="true" aria-describedby="selectHint">
+              <option value="" selected>Select Weather Condition</option>
+              <option value="sunny">Sunny</option>
+              <option value="partly-cloudy">Partly Cloudy</option>
+              <option value="cloudy">Cloudy</option>
+              <option value="rainy">Rainy</option>
+              <option value="thunderstorm">Thunderstorm</option>
+              <option value="snowy">Snowy</option>
+              <option value="foggy">Foggy</option>
+              <option value="windy">Windy</option>
+            </select>
+            <span class="select-caret" aria-hidden="true">▾</span>
+          </div>
+          <p class="hint" id="selectHint">Pick any condition to update the card instantly.</p>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn--ghost" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page__footer">
+      Built by Abhishek Jadhav &middot; Veda Technology Internship &mdash; Day 27/45 &middot; HTML5 &middot; CSS3 &middot; Vanilla JavaScript
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
