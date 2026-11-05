@@ -16,12 +16,6 @@
 
 ---
 
-Weather Icon Display — Static Data by **Abhishek Jadhav** — Web Developer and first-year BCA student at VIIT, Baramati. Built with **HTML5 + CSS3 + Vanilla JavaScript**: a responsive weather condition selector where users pick a condition from a dropdown and instantly see its matching icon, description, and themed background. Static JavaScript data only — no APIs, no backend, no frameworks.
-
-> **Internship attribution:** 45-day Web Development Internship at **Veda Technology** — Day 27: Weather Icon Display (Static Data).
-
-## Features
-
 - **8 weather conditions**: Sunny, Partly Cloudy, Cloudy, Rainy, Thunderstorm, Snowy, Foggy, Windy.
 - **Dropdown selector** with a placeholder option "Select Weather Condition".
 - **Instant update** of icon, name, description, and themed background on selection.
@@ -85,25 +79,6 @@ node --check script.js
 | Snowy | ❄️ | Snowfall with cold temperatures. |
 | Foggy | 🌫️ | Reduced visibility due to fog. |
 | Windy | 🌬️ | Strong winds are blowing. |
-
-## Testing Checklist
-
-- [x] All 8 weather conditions render icon, name, description, and themed background.
-- [x] Dropdown placeholder "Select Weather Condition" present.
-- [x] Selection updates the card immediately.
-- [x] Reset button returns to default state.
-- [x] Default welcome state shown on load.
-- [x] Icon animations play per condition.
-- [x] Smooth transitions between states.
-- [x] Responsive design works on mobile and desktop.
-- [x] No JavaScript console errors.
-- [x] Static data only — no APIs used.
-
-## Limitations
-
-- Static data only: conditions and descriptions are hard-coded, not live weather.
-- No geolocation, no API keys, no backend.
-- Visual themes are CSS-based approximations.
 
 ---
 
